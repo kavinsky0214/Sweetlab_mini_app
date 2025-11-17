@@ -1,19 +1,23 @@
-	
-0	
-id	3
-name	"Chocolate"
-price	"5.99"
-image	"https://purelovinchocolate.com/wp-content/uploads/2021/11/new-16-pc.jpg"
-description	"Chocolate is a food made from fermented, roasted, and ground cocoa beans, typically mixed with fat and sugar. It exists in various forms like dark, milk, and white chocolate, each defined by its differing proportions of cocoa solids, cocoa butter, and other ingredients like milk and sugar. Chocolate is widely consumed as a confection and can be used to flavor other foods and drinks."
-1	
-id	2
-name	"King Candy"
-price	"2.99"
-image	"https://www.celebrationbox.co.nz/cdn/shop/files/6_1b667e0b-6645-4994-9938-38160c99e02a_5800x.png?v=1740958437"
-description	'Candy" most commonly refers to a sweet confection made with sugar, but it can also mean an Italian appliance manufacturer, a 2006 film about drug addiction, a 2022 Hulu miniseries, or even a brand name for games like Candy Crush Saga. As a food, candy is sugar confectionery that can include hard candies, chocolates, and nuts coated in sugar, often eaten as a snack.'
-2	
-id	3
-name	"Snickers"
-price	"3.66"
-image	"https://cdn11.bigcommerce.com/s-jzmamplsrc/images/stencil/1500x1500/products/4544/9012/snickers-fun-size-chocolates-bars__54223.1746997203.jpg?c=1"
-description	"Snickers is a chocolate bar consisting of nougat topped with caramel and peanuts, all encased in milk chocolate. The bars are made by the American company Mars Inc. The annual global sales of Snickers is over $380 million, and it is widely considered the bestselling candy bar in the world."
+[
+  {
+    "id": 3,
+    "name": "Chocolate",
+    "price": "5.99",
+    "image": "https://purelovinchocolate.com/wp-content/uploads/2021/11/new-16-pc.jpg",
+    "description": "Chocolate is a food made from fermented, roasted, and ground cocoa beans, typically mixed with fat and sugar. It exists in various forms like dark, milk, and white chocolate, each defined by its differing proportions of cocoa solids, cocoa butter, and other ingredients like milk and sugar. Chocolate is widely consumed as a confection and can be used to flavor other foods and drinks."
+  },
+  {
+    "id": 2,
+    "name": "King Candy",
+    "price": "2.99",
+    "image": "https://www.celebrationbox.co.nz/cdn/shop/files/6_1b667e0b-6645-4994-9938-38160c99e02a_5800x.png?v=1740958437",
+    "description": "Candy\" most commonly refers to a sweet confection made with sugar, but it can also mean an Italian appliance manufacturer, a 2006 film about drug addiction, a 2022 Hulu miniseries, or even a brand name for games like Candy Crush Saga. As a food, candy is sugar confectionery that can include hard candies, chocolates, and nuts coated in sugar, often eaten as a snack."
+  },
+  {
+    "id": 3,
+    "name": "Snickers",
+    "price": "3.66",
+    "image": "https://cdn11.bigcommerce.com/s-jzmamplsrc/images/stencil/1500x1500/products/4544/9012/snickers-fun-size-chocolates-bars__54223.1746997203.jpg?c=1",
+    "description": "Snickers is a chocolate bar consisting of nougat topped with caramel and peanuts, all encased in milk chocolate. The bars are made by the American company Mars Inc. The annual global sales of Snickers is over $380 million, and it is widely considered the bestselling candy bar in the world."
+  }
+]
