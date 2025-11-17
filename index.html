@@ -1,93 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Candy Shop</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8">
+  <title>Telegram WebApp Test</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
-<body style="padding: 20px; text-align: center;">
-    <h1>🍬 Candy Shop</h1>
-    <p>Add products and click Buy</p>
-    
-    <div id="products"></div>
-    
-    <div style="margin: 20px 0;">
-        <button onclick="addToCart('Gummy Bears', 2.99)" style="padding: 10px; margin: 5px;">Add Gummy Bears $2.99</button>
-        <button onclick="addToCart('Chocolate Bar', 1.99)" style="padding: 10px; margin: 5px;">Add Chocolate $1.99</button>
-    </div>
-    
-    <div id="cart" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;"></div>
-    
-    <button onclick="sendOrder()" style="padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 18px;">
-        🛒 Buy Now
-    </button>
+<body>
+  <h2>Test Mini App</h2>
+  <button onclick="sendData()">Click Me</button>
 
-    <script>
-        let cart = [];
-        const tg = window.Telegram.WebApp;
-        tg.expand();
-        tg.ready();
-
-        function addToCart(name, price) {
-            cart.push({ name, price });
-            updateCart();
-        }
-
-        function updateCart() {
-            const cartDiv = document.getElementById('cart');
-            if (cart.length === 0) {
-                cartDiv.innerHTML = 'Cart is empty';
-                return;
-            }
-            
-            let html = '<h3>Your Cart:</h3>';
-            let total = 0;
-            cart.forEach(item => {
-                html += `<p>${item.name} - $${item.price}</p>`;
-                total += item.price;
-            });
-            html += `<h4>Total: $${total.toFixed(2)}</h4>`;
-            cartDiv.innerHTML = html;
-        }
-
-        async function sendOrder() {
-            if (cart.length === 0) {
-                alert('Cart is empty!');
-                return;
-            }
-
-            const orderData = {
-                products: cart.map(item => item.name),
-                total: cart.reduce((sum, item) => sum + item.price, 0),
-                userId: tg.initDataUnsafe.user?.id || 'unknown',
-                userName: tg.initDataUnsafe.user?.first_name || 'User'
-            };
-
-            console.log('Sending order:', orderData);
-
-            try {
-                // Method 1: Try Telegram's sendData first
-                tg.sendData(JSON.stringify(orderData));
-                console.log('Data sent via Telegram API');
-                
-                // Method 2: Also try direct HTTP request to a webhook (alternative)
-                // await fetch('https://your-webhook-url.com/order', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify(orderData)
-                // });
-                
-                alert('Order sent successfully!');
-                tg.close();
-                
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error sending order: ' + error.message);
-            }
-        }
-
-        // Initialize
-        updateCart();
-    </script>
+  <script>
+    function sendData() {
+      // Send data back to the bot
+      Telegram.WebApp.sendData("Hello from WebApp!");
+    }
+  </script>
 </body>
 </html>
