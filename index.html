@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #FFB6C1;
-            --secondary: #DDA0DD;
-            --accent: #98FB98;
+            --primary: #FF6B8B;
+            --secondary: #FFA7C2;
+            --accent: #FFD166;
             --text: #5D4037;
             --light: #FFF8F8;
             --dark: #4A2C2A;
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --radius: 16px;
             --transition: all 0.3s ease;
+            --gradient: linear-gradient(135deg, #FF6B8B 0%, #FFA7C2 100%);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--light); color: var(--text); line-height: 1.6; transition: var(--transition); max-width: 100%; overflow-x: hidden; }
@@ -24,20 +25,21 @@
         section { padding: 20px; display: none; }
         .active { display: block; }
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 12px 0; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); z-index: 1000; }
-        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.8rem; color: #888; transition: var(--transition); }
+        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.8rem; color: #888; transition: var(--transition); cursor: pointer; }
         .nav-item.active { color: var(--primary); }
         .nav-icon { font-size: 1.2rem; margin-bottom: 4px; }
-        .app-header { background: linear-gradient(to right, var(--primary), var(--secondary)); color: white; padding: 15px 20px; text-align: center; position: relative; }
+        .app-header { background: var(--gradient); color: white; padding: 15px 20px; text-align: center; position: relative; box-shadow: var(--shadow); }
         .app-title { font-size: 1.5rem; font-weight: 700; }
         .cart-count { position: absolute; top: 10px; right: 20px; background: var(--accent); color: var(--dark); border-radius: 50%; width: 22px; height: 22px; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; font-weight: bold; }
         .hero { background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1555507036-ab794f27d2e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 40px 20px; border-radius: var(--radius); margin: 20px; }
         .hero h1 { font-size: 1.8rem; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
         .hero p { font-size: 1rem; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-        .btn { display: inline-block; padding: 10px 20px; font-size: 0.9rem; font-weight: 600; border-radius: 30px; transition: var(--transition); background: white; color: var(--primary); }
+        .btn { display: inline-block; padding: 10px 20px; font-size: 0.9rem; font-weight: 600; border-radius: 30px; transition: var(--transition); background: white; color: var(--primary); cursor: pointer; text-decoration: none; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
-        .section-title { font-size: 1.3rem; margin: 20px 0 15px; color: var(--dark); padding-left: 20px; }
+        .section-title { font-size: 1.3rem; margin: 20px 0 15px; color: var(--dark); padding-left: 20px; position: relative; }
+        .section-title:after { content: ''; position: absolute; bottom: -5px; left: 20px; width: 40px; height: 3px; background: var(--gradient); border-radius: 3px; }
         .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 0 20px; }
-        .product-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .product-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
         .product-img { height: 140px; width: 100%; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .product-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
@@ -45,15 +47,15 @@
         .product-info { padding: 12px; }
         .product-name { font-size: 0.9rem; margin-bottom: 5px; color: var(--dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .product-price { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
-        .add-to-cart { width: 100%; padding: 8px; background: var(--accent); color: var(--dark); font-weight: 600; border-radius: var(--radius); font-size: 0.8rem; }
+        .add-to-cart { width: 100%; padding: 8px; background: var(--accent); color: var(--dark); font-weight: 600; border-radius: var(--radius); font-size: 0.8rem; border: none; cursor: pointer; transition: var(--transition); }
         .add-to-cart:hover { background: var(--primary); color: white; }
         .search-container { padding: 20px; }
         .search-box { display: flex; margin-bottom: 20px; }
         .search-input { flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: var(--radius) 0 0 var(--radius); font-size: 1rem; }
-        .search-btn { padding: 0 15px; background: var(--primary); color: white; border: none; border-radius: 0 var(--radius) var(--radius) 0; }
+        .search-btn { padding: 0 15px; background: var(--primary); color: white; border: none; border-radius: 0 var(--radius) var(--radius) 0; cursor: pointer; }
         .categories { display: flex; gap: 10px; padding: 0 20px; margin-bottom: 20px; overflow-x: auto; }
-        .category-btn { padding: 8px 15px; background: white; border: 1px solid #ddd; border-radius: 20px; font-size: 0.9rem; white-space: nowrap; transition: var(--transition); }
-        .category-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .category-btn { padding: 8px 15px; background: white; border: 1px solid #ddd; border-radius: 20px; font-size: 0.9rem; white-space: nowrap; transition: var(--transition); cursor: pointer; }
+        .category-btn.active { background: var(--gradient); color: white; border-color: var(--primary); }
         .cart-items { padding: 0 20px; }
         .cart-item { display: flex; background: white; border-radius: var(--radius); padding: 15px; margin-bottom: 15px; box-shadow: var(--shadow); }
         .cart-item-img { width: 80px; height: 80px; border-radius: var(--radius); overflow: hidden; margin-right: 15px; }
@@ -62,17 +64,19 @@
         .cart-item-name { font-weight: 600; margin-bottom: 5px; }
         .cart-item-price { color: var(--primary); font-weight: 700; margin-bottom: 10px; }
         .quantity-controls { display: flex; align-items: center; gap: 10px; }
-        .quantity-btn { width: 30px; height: 30px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; }
+        .quantity-btn { width: 30px; height: 30px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
         .quantity { font-weight: 600; }
         .cart-total { padding: 20px; background: white; margin: 20px; border-radius: var(--radius); box-shadow: var(--shadow); font-size: 1.2rem; font-weight: 700; text-align: center; }
-        .checkout-btn { display: block; width: calc(100% - 40px); margin: 20px; padding: 15px; background: var(--primary); color: white; font-weight: 700; border-radius: var(--radius); text-align: center; font-size: 1.1rem; }
+        .checkout-btn { display: block; width: calc(100% - 40px); margin: 20px; padding: 15px; background: var(--gradient); color: white; font-weight: 700; border-radius: var(--radius); text-align: center; font-size: 1.1rem; text-decoration: none; cursor: pointer; }
         .product-detail { padding: 20px; }
         .detail-img { width: 100%; height: 250px; border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
         .detail-img img { width: 100%; height: 100%; object-fit: cover; }
         .detail-name { font-size: 1.5rem; margin-bottom: 10px; color: var(--dark); }
         .detail-price { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 15px; }
         .detail-description { margin-bottom: 20px; line-height: 1.6; }
-        .detail-add-to-cart { width: 100%; padding: 15px; background: var(--accent); color: var(--dark); font-weight: 700; border-radius: var(--radius); font-size: 1.1rem; }
+        .detail-add-to-cart { width: 100%; padding: 15px; background: var(--gradient); color: white; font-weight: 700; border-radius: var(--radius); font-size: 1.1rem; border: none; cursor: pointer; }
+        .empty-cart { text-align: center; padding: 40px 20px; color: #888; }
+        .empty-cart i { font-size: 3rem; margin-bottom: 15px; color: #ddd; }
         @media (min-width: 768px) {
             .products-grid { grid-template-columns: repeat(3, 1fr); }
             .app-container { max-width: 500px; margin: 0 auto; }
@@ -132,7 +136,6 @@
             <div class="cart-total">
                 Total: $<span id="cartTotal">0.00</span>
             </div>
-            <!-- Changed text to Buy Now and added onclick -->
             <a href="#" class="checkout-btn" onclick="checkout()">Buy Now</a>
         </section>
 
@@ -343,7 +346,12 @@
             const totalElement = document.getElementById('cartTotal');
 
             if (cart.length === 0) {
-                cartContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Your cart is empty</p>';
+                cartContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
                 totalElement.textContent = '0.00';
                 return;
             }
@@ -377,7 +385,9 @@
             }
             const cartData = cart.map(item => ({
                 name: item.name,
-                quantity: item.quantity
+                quantity: item.quantity,
+                price: item.price,
+                total: (Number(item.price) * item.quantity).toFixed(2)
             }));
             Telegram.WebApp.sendData(JSON.stringify(cartData));
             Telegram.WebApp.close();
