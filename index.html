@@ -232,7 +232,7 @@
                         <div class="product-name">${product.name}</div>
                         <div class="product-price">$${product.price}</div>
                         <div class="product-description">${product.description}</div>
-                        <button class="add-to-cart" onclick="addToCart(${product.id}, '${product.name}', ${product.price})">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart(${product.id}, '${product.name.replace(/'/g, "\\'")}', ${product.price})">Add to Cart</button>
                     `;
                     container.appendChild(productCard);
                 });
@@ -319,14 +319,28 @@
                 userName: tg.initDataUnsafe.user?.first_name || 'User'
             };
 
+            console.log("📤 SENDING DATA TO BOT:", orderData);
+            console.log("🤖 Telegram WebApp available:", typeof tg !== 'undefined');
+            console.log("📱 SendData function available:", typeof tg.sendData !== 'undefined');
+
             // Send data to bot
-            tg.sendData(JSON.stringify(orderData));
-            
-            tg.showPopup({
-                title: "Order Sent! 🎉",
-                message: `Order for $${orderData.total.toFixed(2)} sent to bot!`,
-                buttons: [{ type: "ok" }]
-            });
+            try {
+                tg.sendData(JSON.stringify(orderData));
+                console.log("✅ Data sent successfully!");
+                
+                tg.showPopup({
+                    title: "Order Sent! 🎉",
+                    message: `Order for $${orderData.total.toFixed(2)} sent to bot!\n\nYou should receive a confirmation message.`,
+                    buttons: [{ type: "ok" }]
+                });
+            } catch (error) {
+                console.log("❌ Error sending data:", error);
+                tg.showPopup({
+                    title: "Error",
+                    message: "Failed to send order. Please try again.",
+                    buttons: [{ type: "ok" }]
+                });
+            }
 
             // Clear cart
             cart = [];
