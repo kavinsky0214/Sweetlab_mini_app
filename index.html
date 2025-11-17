@@ -2,30 +2,46 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>TEST</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
-<body style="padding: 20px;">
-    <h1>🛒 TEST SHOP</h1>
-    <button onclick="sendData()" style="padding: 20px; font-size: 20px; background: blue; color: white;">
-        CLICK TO TEST
+<body style="padding: 20px; text-align: center;">
+    <h1>🧪 TEST PAGE</h1>
+    <p>If you see this, GitHub Pages is working</p>
+    
+    <button onclick="testSend()" style="padding: 20px; font-size: 20px; background: green; color: white; border: none; border-radius: 10px;">
+        🎯 CLICK TO TEST
     </button>
 
     <script>
+        console.log("🔧 Script loaded");
         const tg = window.Telegram.WebApp;
+        tg.expand();
         tg.ready();
         
-        function sendData() {
-            alert("Sending data to bot...");
+        console.log("📱 Telegram WebApp initialized");
+        console.log("👤 User:", tg.initDataUnsafe.user);
+
+        function testSend() {
+            console.log("🔄 Button clicked");
             
-            const data = {
-                test: "hello",
-                products: ["Test Candy"],
-                total: 5.99
+            const testData = {
+                message: "Hello from mini app!",
+                timestamp: new Date().toISOString(),
+                test: "working"
             };
             
-            tg.sendData(JSON.stringify(data));
-            tg.close();
+            console.log("📤 Sending:", testData);
+            
+            // Send to bot
+            tg.sendData(JSON.stringify(testData));
+            
+            console.log("✅ Data sent, closing...");
+            
+            // Close app
+            setTimeout(() => {
+                tg.close();
+            }, 1000);
         }
     </script>
 </body>
