@@ -1,23 +1,98 @@
 [
   {
-    "id": 3,
-    "name": "Chocolate",
-    "price": "5.99",
-    "image": "https://purelovinchocolate.com/wp-content/uploads/2021/11/new-16-pc.jpg",
-    "description": "Chocolate is a food made from fermented, roasted, and ground cocoa beans, typically mixed with fat and sugar. It exists in various forms like dark, milk, and white chocolate, each defined by its differing proportions of cocoa solids, cocoa butter, and other ingredients like milk and sugar. Chocolate is widely consumed as a confection and can be used to flavor other foods and drinks."
+    "id": 1,
+    "name": "Chocolate Truffles",
+    "price": "12.99",
+    "image": "https://images.unsplash.com/photo-1623246123320-0d6a9f362b9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Rich and creamy chocolate truffles with a smooth ganache center.",
+    "category": "chocolates"
   },
   {
     "id": 2,
     "name": "King Candy",
     "price": "2.99",
-    "image": "https://www.celebrationbox.co.nz/cdn/shop/files/6_1b667e0b-6645-4994-9938-38160c99e02a_5800x.png?v=1740958437",
-    "description": "Candy\" most commonly refers to a sweet confection made with sugar, but it can also mean an Italian appliance manufacturer, a 2006 film about drug addiction, a 2022 Hulu miniseries, or even a brand name for games like Candy Crush Saga. As a food, candy is sugar confectionery that can include hard candies, chocolates, and nuts coated in sugar, often eaten as a snack."
+    "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Assorted colorful candies perfect for any sweet tooth.",
+    "category": "candies"
   },
   {
     "id": 3,
-    "name": "Snickers",
+    "name": "Snickers Bar",
     "price": "3.66",
-    "image": "https://cdn11.bigcommerce.com/s-jzmamplsrc/images/stencil/1500x1500/products/4544/9012/snickers-fun-size-chocolates-bars__54223.1746997203.jpg?c=1",
-    "description": "Snickers is a chocolate bar consisting of nougat topped with caramel and peanuts, all encased in milk chocolate. The bars are made by the American company Mars Inc. The annual global sales of Snickers is over $380 million, and it is widely considered the bestselling candy bar in the world."
+    "image": "https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Classic Snickers bar with nougat, caramel, and peanuts covered in milk chocolate.",
+    "category": "chocolates"
+  },
+  {
+    "id": 4,
+    "name": "Gummy Bears",
+    "price": "5.99",
+    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Colorful and fruity gummy bears in assorted flavors.",
+    "category": "candies"
+  },
+  {
+    "id": 5,
+    "name": "Butter Cookies",
+    "price": "8.99",
+    "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Buttery and crumbly cookies with a delicate texture.",
+    "category": "cookies"
+  },
+  {
+    "id": 6,
+    "name": "Dark Chocolate",
+    "price": "4.99",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Premium dark chocolate bar with 70% cocoa content.",
+    "category": "chocolates"
+  },
+  {
+    "id": 7,
+    "name": "Lollipops",
+    "price": "3.99",
+    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Colorful swirl lollipops in various fruity flavors.",
+    "category": "candies"
+  },
+  {
+    "id": 8,
+    "name": "Macarons",
+    "price": "15.99",
+    "image": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "French macarons with delicate shells and flavorful fillings.",
+    "category": "cookies"
+  },
+  {
+    "id": 9,
+    "name": "Milk Chocolate",
+    "price": "3.99",
+    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Creamy milk chocolate bar with smooth texture.",
+    "category": "chocolates"
+  },
+  {
+    "id": 10,
+    "name": "Jelly Beans",
+    "price": "4.49",
+    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Assorted flavored jelly beans in vibrant colors.",
+    "category": "candies"
+  },
+  {
+    "id": 11,
+    "name": "Shortbread Cookies",
+    "price": "7.99",
+    "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Classic shortbread cookies with buttery flavor.",
+    "category": "cookies"
+  },
+  {
+    "id": 12,
+    "name": "White Chocolate",
+    "price": "5.49",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    "description": "Sweet white chocolate bar with vanilla flavor.",
+    "category": "chocolates"
   }
 ]
