@@ -299,7 +299,7 @@
             buyButton.textContent = `Buy Now ($${total.toFixed(2)})`;
         }
 
-        // Send order to bot
+        // Send order to bot - FIXED VERSION
         function sendOrderToBot() {
             if (cart.length === 0) {
                 tg.showPopup({
@@ -319,32 +319,15 @@
                 userName: tg.initDataUnsafe.user?.first_name || 'User'
             };
 
-            console.log("📤 SENDING DATA TO BOT:", orderData);
-            console.log("🤖 Telegram WebApp available:", typeof tg !== 'undefined');
-            console.log("📱 SendData function available:", typeof tg.sendData !== 'undefined');
+            console.log("📤 Sending order to bot:", orderData);
 
-            // Send data to bot
-            try {
-                tg.sendData(JSON.stringify(orderData));
-                console.log("✅ Data sent successfully!");
-                
-                tg.showPopup({
-                    title: "Order Sent! 🎉",
-                    message: `Order for $${orderData.total.toFixed(2)} sent to bot!\n\nYou should receive a confirmation message.`,
-                    buttons: [{ type: "ok" }]
-                });
-            } catch (error) {
-                console.log("❌ Error sending data:", error);
-                tg.showPopup({
-                    title: "Error",
-                    message: "Failed to send order. Please try again.",
-                    buttons: [{ type: "ok" }]
-                });
-            }
-
-            // Clear cart
-            cart = [];
-            updateCartDisplay();
+            // Send data to bot and CLOSE mini app
+            tg.sendData(JSON.stringify(orderData));
+            
+            // Close the mini app immediately after sending data
+            setTimeout(() => {
+                tg.close();
+            }, 100);
         }
 
         // Load products on page load
