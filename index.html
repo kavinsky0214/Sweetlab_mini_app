@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Shop</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            padding: 10px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: none;
+            border: none;
+            font-size: 12px;
+            color: #667eea;
+            cursor: pointer;
+        }
+        .nav-btn.active {
+            color: #764ba2;
+            font-weight: bold;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .product-price {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .product-description {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍬 Candy Shop</h1>
+            <p>Sweet treats delivered to you!</p>
+        </div>
+
+        <!-- Main Page -->
+        <div id="main-page" class="page active">
+            <div class="product-card">
+                <h3>Welcome to Candy Shop! 🍭</h3>
+                <p>Browse our delicious collection of sweets and candies.</p>
+            </div>
+            <div id="products-container">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Search Page -->
+        <div id="search-page" class="page">
+            <div class="product-card">
+                <h3>Search 🔍</h3>
+                <p>Search functionality coming soon...</p>
+            </div>
+        </div>
+
+        <!-- Catalog Page -->
+        <div id="catalog-page" class="page">
+            <div id="catalog-container">
+                <!-- Catalog products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cart-page" class="page">
+            <div class="product-card">
+                <h3>Cart 🛒</h3>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <button class="nav-btn active" onclick="showPage('main-page')">Main</button>
+            <button class="nav-btn" onclick="showPage('search-page')">Search</button>
+            <button class="nav-btn" onclick="showPage('catalog-page')">Catalog</button>
+            <button class="nav-btn" onclick="showPage('cart-page')">Cart</button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Telegram Web App
+        if (typeof window.Telegram !== 'undefined') {
+            const tg = window.Telegram.WebApp;
+            tg.expand();
+            tg.ready();
+        }
+
+        // Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (pageId === 'catalog-page') {
+                loadProducts('catalog-container');
+            }
+        }
+
+        // Load products from JSON file
+        async function loadProducts(containerId) {
+            const container = document.getElementById(containerId);
+            
+            try {
+                const response = await fetch('./products.json');
+                const products = await response.json();
+                
+                container.innerHTML = '';
+                
+                if (!products || products.length === 0) {
+                    container.innerHTML = '<div class="product-card">No products available</div>';
+                    return;
+                }
+                
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-price">$${product.price}</div>
+                        <div class="product-description">${product.description}</div>
+                    `;
+                    container.appendChild(productCard);
+                });
+            } catch (error) {
+                console.error('Error loading products:', error);
+                container.innerHTML = '<div class="product-card">No products available</div>';
+            }
+        }
+
+        // Load products on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts('products-container');
+        });
+    </script>
+</body>
+</html>
