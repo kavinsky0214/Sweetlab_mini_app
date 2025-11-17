@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Chocolate Truffles",
     "price": "12.99",
-    "image": "https://images.unsplash.com/photo-1623246123320-0d6a9f362b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    "image": "https://www.abakingjourney.com/wp-content/uploads/2021/12/French-Chocolate-Truffles-Feature.jpg",
     "description": "Rich and creamy chocolate truffles with a smooth ganache center.",
     "category": "chocolates"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Gummy Bears",
     "price": "5.99",
-    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    "image": "https://cdn11.bigcommerce.com/s-riqk6cih6h/images/stencil/1280x1280/products/140/2087/50270_1__56109.1656534407.jpg?c=1",
     "description": "Colorful and fruity gummy bears in assorted flavors.",
     "category": "candies"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Colorful Lollipops",
     "price": "3.99",
-    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    "image": "https://m.media-amazon.com/images/I/71-GYy28psL._AC_UF350,350_QL80_.jpg",
     "description": "Colorful swirl lollipops in various fruity flavors.",
     "category": "candies"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Jelly Beans",
     "price": "4.49",
-    "image": "https://images.unsplash.com/photo-1582058091505-87c6c0f5c9ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    "image": "https://i.ytimg.com/vi/3gfs_FAITTs/hqdefault.jpg",
     "description": "Assorted flavored jelly beans in vibrant colors.",
     "category": "candies"
   },
