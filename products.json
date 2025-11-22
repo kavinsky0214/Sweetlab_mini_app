@@ -1,98 +1,162 @@
 [
   {
     "id": 1,
-    "name": "Chocolate Truffles",
-    "price": "12.99",
-    "image": "https://www.abakingjourney.com/wp-content/uploads/2021/12/French-Chocolate-Truffles-Feature.jpg",
-    "description": "Rich and creamy chocolate truffles with a smooth ganache center.",
-    "category": "chocolates"
+    "name": "Chocolate Truffle Box",
+    "price": "45000",
+    "category": "chocolates",
+    "image": "https://m.media-amazon.com/images/I/81QtnjbWA0L._SL1500_.jpg",
+    "description": "Premium handmade chocolate truffles with various fillings"
   },
   {
     "id": 2,
-    "name": "King Candy",
-    "price": "2.99",
-    "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Assorted colorful candies perfect for any sweet tooth.",
-    "category": "candies"
+    "name": "Fruit Candy Mix",
+    "price": "15000",
+    "category": "candies",
+    "image": "https://stickyusa.com/cdn/shop/files/fruit-mix-candy-sticky-2.png?v=1758845905&width=1445",
+    "description": "Assorted fruit-flavored candies in vibrant colors"
   },
   {
     "id": 3,
-    "name": "Snickers Bar",
-    "price": "3.66",
-    "image": "https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Classic Snickers bar with nougat, caramel, and peanuts covered in milk chocolate.",
-    "category": "chocolates"
+    "name": "Red Velvet Cake",
+    "price": "85000",
+    "category": "cakes",
+    "image": "https://www.blessthismessplease.com/wp-content/uploads/2022/02/red-velvet-cake-22.jpg",
+    "description": "Classic red velvet cake with cream cheese frosting"
   },
   {
     "id": 4,
-    "name": "Gummy Bears",
-    "price": "5.99",
-    "image": "https://cdn11.bigcommerce.com/s-riqk6cih6h/images/stencil/1280x1280/products/140/2087/50270_1__56109.1656534407.jpg?c=1",
-    "description": "Colorful and fruity gummy bears in assorted flavors.",
-    "category": "candies"
+    "name": "Dark Chocolate Bar",
+    "price": "25000",
+    "category": "chocolates",
+    "image": "https://www.godivachocolates.co.uk/dw/image/v2/AAKG_PRD/on/demandware.static/-/Sites-godiva-master-catalog-eu/default/dw5c0c0f36/product-images/84314_1.png?sw=800&sh=800",
+    "description": "70% dark chocolate bar with rich cocoa flavor"
   },
   {
     "id": 5,
-    "name": "Butter Cookies",
-    "price": "8.99",
-    "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Buttery and crumbly cookies with a delicate texture.",
-    "category": "cookies"
+    "name": "Gummy Bears",
+    "price": "12000",
+    "category": "candies",
+    "image": "https://haribo.com/cdn/shop/products/HARIBO_Gold-Bears_10oz_Front_1024x1024.png?v=1663878338",
+    "description": "Classic gummy bears in five fruity flavors"
   },
   {
     "id": 6,
-    "name": "Dark Chocolate",
-    "price": "4.99",
-    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Premium dark chocolate bar with 70% cocoa content.",
-    "category": "chocolates"
+    "name": "Chocolate Chip Cookies",
+    "price": "18000",
+    "category": "cookies",
+    "image": "https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg",
+    "description": "Freshly baked cookies loaded with chocolate chips"
   },
   {
     "id": 7,
-    "name": "Colorful Lollipops",
-    "price": "3.99",
-    "image": "https://m.media-amazon.com/images/I/71-GYy28psL._AC_UF350,350_QL80_.jpg",
-    "description": "Colorful swirl lollipops in various fruity flavors.",
-    "category": "candies"
+    "name": "Strawberry Cheesecake",
+    "price": "75000",
+    "category": "cakes",
+    "image": "https://www.kingarthurbaking.com/sites/default/files/2023-10/strawberry-cheesecake.jpg",
+    "description": "Creamy cheesecake with fresh strawberry topping"
   },
   {
     "id": 8,
-    "name": "French Macarons",
-    "price": "15.99",
-    "image": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "French macarons with delicate shells and flavorful fillings.",
-    "category": "cookies"
+    "name": "White Chocolate Hearts",
+    "price": "32000",
+    "category": "chocolates",
+    "image": "https://www.lindt.ca/media/catalog/product/cache/6e52a663d6c28cec41555152d601a4b9/1/1/112559_lindor_white_heart_100g_front_can.png",
+    "description": "Smooth white chocolate in heart shapes"
   },
   {
     "id": 9,
-    "name": "Milk Chocolate",
-    "price": "3.99",
-    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Creamy milk chocolate bar with smooth texture.",
-    "category": "chocolates"
+    "name": "Sour Belts",
+    "price": "13000",
+    "category": "candies",
+    "image": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/1069/1547/sour-belts-tropical-1-lb__92624.1645550402.jpg?c=2",
+    "description": "Tangy sour candy belts in assorted flavors"
   },
   {
     "id": 10,
-    "name": "Jelly Beans",
-    "price": "4.49",
-    "image": "https://i.ytimg.com/vi/3gfs_FAITTs/hqdefault.jpg",
-    "description": "Assorted flavored jelly beans in vibrant colors.",
-    "category": "candies"
+    "name": "Oatmeal Raisin Cookies",
+    "price": "16000",
+    "category": "cookies",
+    "image": "https://www.cookingclassy.com/wp-content/uploads/2019/09/oatmeal-raisin-cookies-12.jpg",
+    "description": "Hearty oatmeal cookies with plump raisins"
   },
   {
     "id": 11,
-    "name": "Shortbread Cookies",
-    "price": "7.99",
-    "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Classic shortbread cookies with buttery flavor.",
-    "category": "cookies"
+    "name": "Chocolate Mousse Cake",
+    "price": "68000",
+    "category": "cakes",
+    "image": "https://sallysbakingaddiction.com/wp-content/uploads/2023/02/chocolate-mousse-cake.jpg",
+    "description": "Layers of rich chocolate mousse and sponge cake"
   },
   {
     "id": 12,
-    "name": "White Chocolate",
-    "price": "5.49",
-    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    "description": "Sweet white chocolate bar with vanilla flavor.",
-    "category": "chocolates"
+    "name": "Caramel Chocolates",
+    "price": "38000",
+    "category": "chocolates",
+    "image": "https://www.galler.com/wp-content/uploads/2020/10/Noir-Caramel-1.png",
+    "description": "Dark chocolate filled with smooth caramel"
+  },
+  {
+    "id": 13,
+    "name": "Lollipop Assortment",
+    "price": "8000",
+    "category": "candies",
+    "image": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/1058/1536/assorted-dum-dum-pops-1-lb__91786.1645550402.jpg?c=2",
+    "description": "Colorful lollipops in various fruit flavors"
+  },
+  {
+    "id": 14,
+    "name": "Sugar Cookies",
+    "price": "14000",
+    "category": "cookies",
+    "image": "https://www.iheartnaptime.net/wp-content/uploads/2023/12/sugar-cookies-recipe.jpg",
+    "description": "Buttery sugar cookies with sweet icing"
+  },
+  {
+    "id": 15,
+    "name": "Tiramisu Cake",
+    "price": "72000",
+    "category": "cakes",
+    "image": "https://www.culinaryhill.com/wp-content/uploads/2021/01/Tiramisu-Culinary-Hill-1200x800-1.jpg",
+    "description": "Italian classic with coffee-soaked layers"
+  },
+  {
+    "id": 16,
+    "name": "Hazelnut Pralines",
+    "price": "42000",
+    "category": "chocolates",
+    "image": "https://www.valrhona.com/sites/default/files/2023-06/VCP-PRALINE-NOISETTE-50G-FRONT_0.png",
+    "description": "Creamy chocolate with crunchy hazelnut pieces"
+  },
+  {
+    "id": 17,
+    "name": "Jelly Beans",
+    "price": "11000",
+    "category": "candies",
+    "image": "https://www.jellybelly.com/images/products/jelly-belly-49-flavor-bean-jar-3-lb-3d.png",
+    "description": "Assorted jelly beans in 20 different flavors"
+  },
+  {
+    "id": 18,
+    "name": "Double Chocolate Cookies",
+    "price": "22000",
+    "category": "cookies",
+    "image": "https://www.ambitiouskitchen.com/wp-content/uploads/2023/11/Double-Chocolate-Cookies-4.jpg",
+    "description": "Rich double chocolate cookies for true chocolate lovers"
+  },
+  {
+    "id": 19,
+    "name": "Carrot Cake",
+    "price": "65000",
+    "category": "cakes",
+    "image": "https://www.simplyrecipes.com/thmb/y_7V0c9Yh3VK2zCj14lTw0h8SxY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Carrot-Cake-LEAD-01-2-1c1db6effd984f5c8708f410ef6c693e.jpg",
+    "description": "Moist carrot cake with cream cheese frosting and walnuts"
+  },
+  {
+    "id": 20,
+    "name": "Mint Chocolate Bars",
+    "price": "28000",
+    "category": "chocolates",
+    "image": "https://www.ghirardelli.com/cdn/shop/products/11032122_81018_ghirardelli_dark_chocolate_mint_filling_squares_bar_3oz_flat_wrapper_front_800x.png?v=1680203938",
+    "description": "Refreshing mint chocolate with smooth dark chocolate"
   }
 ]
