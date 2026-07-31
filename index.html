@@ -170,7 +170,7 @@
             grid-template-columns: repeat(2, 1fr); 
             gap: 16px; 
         }
-                /* ✨ Dynamic Flexbox Card Layout */
+        /* ✨ Uniform, Compact Card Layout */
         .product-card { 
             background: var(--light); 
             border-radius: var(--radius); 
@@ -178,21 +178,15 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.12);
             cursor: pointer; 
             transition: var(--transition);
-            
-            /* NEW: Flexbox magic for dynamic heights */
-            display: flex;
-            flex-direction: column;
-            height: 100%; /* Forces the card to fill the grid cell height */
         }
         .product-card:active { 
             transform: scale(0.98); 
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         
-        /*  Image expands to fill all available space */
+        /* ✨ Slightly shorter image height */
         .product-img { 
-            flex: 1; /* Takes up ALL remaining space left by the price tag */
-            min-height: 140px; /* Ensures image never gets too small */
+            height: 130px; /* Reduced from 140px to make card shorter */
             width: 100%; 
             background-color: #ffffff; 
             display: flex; 
@@ -206,10 +200,9 @@
             object-fit: cover;
         }
         
-        /* ✨ Price tag stays glued to the bottom */
+        /* ✨ Tighter price tag section */
         .product-info { 
-            flex-shrink: 0; /* Prevents the info section from shrinking */
-            padding: 10px 12px; 
+            padding: 8px 12px; /* Reduced padding to cut space */
             background: #f5f5f5; 
             border-top: 1px solid #e8e8e8;
             box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
@@ -220,7 +213,7 @@
             font-weight: 700; 
             color: #1a1a1a;
             line-height: 1.2;
-            margin-bottom: 2px;
+            margin-bottom: 1px; /* Tightened margin */
             letter-spacing: -0.5px;
         }
         
@@ -228,7 +221,7 @@
             font-size: 0.75rem; 
             color: #999;
             text-decoration: line-through;
-            margin-bottom: 4px; 
+            margin-bottom: 3px; /* Tightened margin */
             font-weight: 500;
         }
         
@@ -238,9 +231,9 @@
             color: white;
             font-size: 0.7rem; 
             font-weight: 600;
-            padding: 3px 6px; 
+            padding: 2px 6px; /* Tightened padding */
             border-radius: 4px; 
-            margin-bottom: 6px; 
+            margin-bottom: 4px; /* Tightened margin */
             line-height: 1.2;
         }
         
@@ -253,7 +246,6 @@
             overflow: hidden; 
             text-overflow: ellipsis; 
         }
-        
         .search-box { 
             display: flex; 
             margin-bottom: 20px; 
