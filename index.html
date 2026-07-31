@@ -196,21 +196,23 @@
             object-fit: cover; /* Fills the frame completely */
         }
         
-        /* ✨ POLISHED: Glassy/Gray effect for price and name section */
+         /* ✨ POLISHED: Glassy/Gray effect for price and name section (COMPACT) */
         .product-info { 
-            padding: 12px;
-            background: rgba(245, 245, 247, 0.85); /* Semi-transparent light gray */
-            backdrop-filter: blur(8px);            /* The "glassy" blur effect */
-            -webkit-backdrop-filter: blur(8px);    /* Safari support */
-            border-top: 1px solid rgba(255, 255, 255, 0.6); /* Subtle glass edge highlight */
+            padding: 8px 12px; /* Reduced top/bottom padding from 12px to 8px */
+            background: rgba(245, 245, 247, 0.85); 
+            backdrop-filter: blur(8px);            
+            -webkit-backdrop-filter: blur(8px);    
+            border-top: 1px solid rgba(255, 255, 255, 0.6); 
         }
         
         .product-price { 
-            font-size: 1.1rem; 
+            font-size: 1.05rem; /* Slightly tighter font size */
             font-weight: 700; 
             color: var(--primary); 
-            margin-bottom: 4px; 
+            margin-bottom: 2px; /* Reduced from 4px to 2px */
+            line-height: 1.2;   /* Tightens the text vertically */
         }
+        
         .product-name { 
             font-size: 0.85rem; 
             color: var(--text); 
@@ -218,6 +220,7 @@
             overflow: hidden; 
             text-overflow: ellipsis; 
             font-weight: 600;
+            line-height: 1.2;   /* Tightens the text vertically */
         }
         .search-box { 
             display: flex; 
