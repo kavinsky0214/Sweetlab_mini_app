@@ -8,7 +8,7 @@
     "trend": -5,
     "category": "phones",
     "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/redmi_note15.webp",
-    "description": "Latest Xiaomi smartphone with 128GB storage, 8GB RAM, 108MP camera, and 5000mAh battery. Perfect for everyday use."
+    "description": "128GB xotira, 8GB RAM, 108MP kamera va 5000mAh batareyaga ega eng so‘nggi Xiaomi smartfoni. Kundalik foydalanish uchun juda mos."
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "trend": -5,
     "category": "phones",
     "image": "https://expercom.com/cdn/shop/files/iPhone_15_Pro_Max_Blue_Titanium_PDP_Image_Position-1__en-US_8f1c8d3d-9afd-465a-a622-a855989878e5.jpg?v=1738267276",
-    "description": "Apple's flagship phone with A17 Pro chip, titanium design, 256GB storage, and professional camera system."
+    "description": "A17 Pro chipi, titan korpusi, 256GB xotira va professional kamera tizimiga ega Apple’ning flagman smartfoni."
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "trend": -5,
     "category": "phones",
     "image": "https://dommobile.ru/wp-content/uploads/2024/01/samsung-galaxy-s24-ultra-seryj-2-scaled-768x768.webp",
-    "description": "Premium Samsung phone with S Pen, 512GB storage, 200MP camera, and AI-powered features."
+    "description": "S Pen, 512GB xotira, 200MP kamera va sun’iy intellekt asosidagi funksiyalarga ega premium Samsung smartfoni."
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "trend": -5,
     "category": "laptops",
     "image": "https://avatars.mds.yandex.net/get-mpic/16699368/img_id5383113200819335412.jpeg/orig",
-    "description": "Professional laptop with M3 chip, 16GB RAM, 512GB SSD, and stunning Liquid Retina XDR display."
+    "description": "M3 chipi, 16GB RAM, 512GB SSD va ajoyib Liquid Retina XDR displeyga ega professional noutbuk."
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "trend": -5,
     "category": "laptops",
     "image": "https://basket-20.wbbasket.ru/vol3477/part347770/347770310/images/big/1.webp",
-    "description": "Affordable laptop with Intel Core i5, 8GB RAM, 512GB SSD, perfect for students and home office."
+    "description": "Intel Core i5, 8GB RAM va 512GB SSD bilan jihozlangan hamyonbop noutbuk. Talabalar va uy/ofis ishlari uchun juda mos."
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "trend": -5,
     "category": "fridges",
     "image": "https://mega-kuhnya.ru/image/cache/catalog/product/LG/Mobile-Zoom-2_23-1200x800.jpg",
-    "description": "Large capacity smart refrigerator with inverter compressor, water dispenser, and smart diagnosis."
+    "description": "Inverter kompressori, suv dispenseri va Smart Diagnosis funksiyasiga ega katta sig‘imli aqlli muzlatgich."
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "trend": -5,
     "category": "fridges",
     "image": "https://bistrotehnika.ru/image/cache/catalog/tovari/holodilniki/oad-resize_cache-iblock-bb5-c9b-1900_563_1-1-1200x630.jpg",
-    "description": "Modern side-by-side refrigerator with 617L capacity, digital inverter, and LED lighting."
+    "description": "617 litr sig‘im, raqamli inverter texnologiyasi va LED yoritishga ega zamonaviy Side-by-Side muzlatgich."
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "trend": -5,
     "category": "acs",
     "image": "https://sc04.alicdn.com/kf/H02a18002e3e54312bd573d6ad4eba93aL/9000BTU-Brand-New-Product-24-Hours-Timer-R410-T1-T3-Outdoor-Air-Conditioner.jpg",
-    "description": "Powerful air conditioner with inverter technology, suitable for 30-35 sqm rooms, energy efficient."
+    "description": "Inverter texnologiyasiga ega kuchli konditsioner. 30–35 m² xonalar uchun mos va energiyani tejaydi."
   },
   {
     "id": 9,
@@ -96,6 +96,6 @@
     "trend": -5,
     "category": "acs",
     "image": "https://image.made-in-china.com/2f0j00fhgeEMZGAmbF/Heating-Cooling-AC-Fashionable-Wall-Mounted-Air-Conditioner-9000-BTU-Low-Power-Operation.jpg",
-    "description": "Reliable Daikin air conditioner with cooling and heating modes, quiet operation, and remote control."
+    "description": "Sovitish va isitish rejimlari, jim ishlash hamda masofadan boshqarish pulti bilan jihozlangan ishonchli Daikin konditsioneri."
   }
 ]
