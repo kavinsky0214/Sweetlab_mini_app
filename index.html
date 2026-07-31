@@ -170,8 +170,7 @@
             grid-template-columns: repeat(2, 1fr); 
             gap: 16px; 
         }
-        
-        /*  STRICT UNIFORM CARD LAYOUT */
+        /*  Uniform Flexbox Layout (Keeps cards same size, pushes info to bottom) */
         .product-card { 
             background: var(--light); 
             border-radius: var(--radius); 
@@ -181,16 +180,16 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            height: 100%; /* Grid makes them equal height */
+            height: 100%; /* Forces card to fill grid height uniformly */
         }
         .product-card:active { 
             transform: scale(0.98); 
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         
-        /* Fixed height image - NO dynamic stretching */
+        /* ✨ Reduced image height for shorter cards */
         .product-img { 
-            height: 150px; 
+            height: 120px; /* Reduced from 150px */
             width: 100%; 
             background-color: #ffffff; 
             display: flex; 
@@ -205,65 +204,63 @@
             object-fit: cover;
         }
         
-        /* Info section pushed to the very bottom */
+        /* ✨ Tighter info section glued to bottom */
         .product-info { 
-            margin-top: auto; /* Pushes this block to the bottom of the card */
-            padding: 10px 12px; 
+            margin-top: auto; /* Keeps it glued to the bottom */
+            padding: 8px 10px; /* Reduced padding */
             background: #f5f5f5; 
             border-top: 1px solid #e8e8e8;
             box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
             flex-shrink: 0;
         }
         
-        /* Price and Trend Row */
         .product-price-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 4px;
+            display: flex; 
+            align-items: center; 
+            gap: 6px; 
+            margin-bottom: 3px;
         }
         
+        /* ✨ Smaller price font */
         .product-price { 
-            font-size: 1rem; 
+            font-size: 0.9rem; /* Reduced from 1rem */
             font-weight: 700; 
-            color: #1a1a1a;
-            line-height: 1.2;
+            color: #1a1a1a; 
+            line-height: 1.2; 
             letter-spacing: -0.5px;
         }
         
-        /* Trend Indicator */
         .product-trend {
-            font-size: 0.75rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 3px;
+            font-size: 0.7rem; /* Reduced from 0.75rem */
+            font-weight: 700; 
+            display: flex; 
+            align-items: center; 
+            gap: 2px;
         }
-        .product-trend.down { color: #fe0002; } /* Red for price drop */
-        .product-trend.up { color: #28a745; }   /* Green for price increase */
+        .product-trend.down { color: #fe0002; }
+        .product-trend.up { color: #28a745; }
         
         .product-installment {
-            display: inline-block;
+            display: inline-block; 
             background: #fe0002; 
             color: white;
-            font-size: 0.7rem; 
-            font-weight: 600;
-            padding: 2px 6px; 
+            font-size: 0.65rem; /* Reduced */
+            font-weight: 600; 
+            padding: 2px 5px; /* Reduced */
             border-radius: 4px; 
-            margin-bottom: 6px; 
+            margin-bottom: 4px; /* Reduced */
             line-height: 1.2;
         }
         
         .product-name { 
-            font-size: 0.8rem; 
-            color: #1a1a1a;
-            font-weight: 600;
+            font-size: 0.75rem; /* Reduced from 0.8rem */
+            color: #1a1a1a; 
+            font-weight: 600; 
             line-height: 1.2; 
             white-space: nowrap; 
             overflow: hidden; 
             text-overflow: ellipsis; 
         }
-        
         .search-box { 
             display: flex; 
             margin-bottom: 20px; 
@@ -291,9 +288,9 @@
             margin-bottom: 20px; 
             overflow-x: auto; 
             padding-bottom: 5px; 
-            scrollbar-width: none;
+            scrollbar-width: none; /* Firefox */
         }
-        .categories::-webkit-scrollbar { display: none; }
+        .categories::-webkit-scrollbar { display: none; } /* Chrome/Safari */
         
         .category-btn { 
             padding: 8px 16px; 
@@ -700,6 +697,7 @@
 
         async function loadProductsFromJSON() {
             try {
+                // 🛡️ CACHE BUSTER: Prevents GitHub Pages from serving stale cached JSON
                 const response = await fetch('products.json?t=' + new Date().getTime());
                 if (!response.ok) {
                     throw new Error('Failed to load products');
@@ -739,15 +737,6 @@
             }
         }
 
-        // Helper function to generate the trend HTML
-        function getTrendHtml(trend) {
-            if (trend === undefined || trend === null || trend === 0) return '';
-            const isDown = trend < 0;
-            const arrowIcon = isDown ? '<i class="fas fa-arrow-down"></i>' : '<i class="fas fa-arrow-up"></i>';
-            const trendClass = isDown ? 'down' : 'up';
-            return `<div class="product-trend ${trendClass}">${arrowIcon} ${Math.abs(trend)}%</div>`;
-        }
-
         function renderFeaturedProducts() {
             const featuredContainer = document.getElementById('featuredProducts');
             const featuredProducts = products.slice(0, 4);
@@ -757,10 +746,8 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price-row">
-                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                            ${getTrendHtml(product.trend)}
-                        </div>
+                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
@@ -780,10 +767,8 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price-row">
-                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                            ${getTrendHtml(product.trend)}
-                        </div>
+                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
@@ -824,10 +809,8 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price-row">
-                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                            ${getTrendHtml(product.trend)}
-                        </div>
+                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
