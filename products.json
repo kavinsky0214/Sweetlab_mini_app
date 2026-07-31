@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
-    "name": "Redmi Note 15 Pro",
-    "price": "3700000",
-    "category": "Phones",
-    "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/redmi_note15.webp",
-    "description": "Смартфон Xiaomi Redmi Note 15 Pro, 12+512 ГБ, 200 МП камера, 6.77″ FHD+ AMOLED, 6500 мАч."
-  },
-  {
     "id": 2,
     "name": "HP Victus",
     "price": "12000000",
     "category": "Laptops",
-    "image": "https://mrlaptop.pk/laptops/hp-victus-15-fa1048nia-gaming-laptop-intel-core-i7-13620h/",
+    "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/Hp-victus.jfif",
     "description": "Ноутбук HP Victus Ryzen 7 8845HS DDR5 16/512 SSD RTX 4060 8GB 15.6FH.D IPS 144HZ"
+  },
+  {
+    "id": 3,
+    "name": "Redmi Note 15 Pro",
+    "price": "3700000",
+    "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/redmi_note15.webp",
+    "category": "Phones",
+    "description": "Смартфон Xiaomi Redmi Note 15 Pro, 12+512 ГБ, 200 МП камера, 6.77″ FHD+ AMOLED, 6500 мАч."
   }
 ]
