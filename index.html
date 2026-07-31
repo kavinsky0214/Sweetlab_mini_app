@@ -170,7 +170,8 @@
             grid-template-columns: repeat(2, 1fr); 
             gap: 16px; 
         }
-        /*  Uniform Flexbox Layout (Keeps cards same size, pushes info to bottom) */
+        
+        /*  STRICT UNIFORM CARD LAYOUT */
         .product-card { 
             background: var(--light); 
             border-radius: var(--radius); 
@@ -180,7 +181,7 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            height: 100%; /* Forces card to fill grid height uniformly */
+            height: 100%; /* Grid makes them equal height */
         }
         .product-card:active { 
             transform: scale(0.98); 
@@ -261,6 +262,7 @@
             overflow: hidden; 
             text-overflow: ellipsis; 
         }
+        
         .search-box { 
             display: flex; 
             margin-bottom: 20px; 
@@ -288,9 +290,9 @@
             margin-bottom: 20px; 
             overflow-x: auto; 
             padding-bottom: 5px; 
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
         }
-        .categories::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        .categories::-webkit-scrollbar { display: none; }
         
         .category-btn { 
             padding: 8px 16px; 
@@ -697,7 +699,6 @@
 
         async function loadProductsFromJSON() {
             try {
-                // 🛡️ CACHE BUSTER: Prevents GitHub Pages from serving stale cached JSON
                 const response = await fetch('products.json?t=' + new Date().getTime());
                 if (!response.ok) {
                     throw new Error('Failed to load products');
@@ -737,6 +738,15 @@
             }
         }
 
+        // Helper function to generate the trend HTML
+        function getTrendHtml(trend) {
+            if (trend === undefined || trend === null || trend === 0) return '';
+            const isDown = trend < 0;
+            const arrowIcon = isDown ? '<i class="fas fa-arrow-down"></i>' : '<i class="fas fa-arrow-up"></i>';
+            const trendClass = isDown ? 'down' : 'up';
+            return `<div class="product-trend ${trendClass}">${arrowIcon} ${Math.abs(trend)}%</div>`;
+        }
+
         function renderFeaturedProducts() {
             const featuredContainer = document.getElementById('featuredProducts');
             const featuredProducts = products.slice(0, 4);
@@ -746,8 +756,10 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
+                        <div class="product-price-row">
+                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                            ${getTrendHtml(product.trend)}
+                        </div>
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
@@ -767,8 +779,10 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
+                        <div class="product-price-row">
+                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                            ${getTrendHtml(product.trend)}
+                        </div>
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
@@ -809,8 +823,10 @@
                         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x150?text=No+Image'">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
-                        ${product.old_price ? `<div class="product-old-price">${formatPrice(product.old_price)} ${CURRENCY}</div>` : ''}
+                        <div class="product-price-row">
+                            <div class="product-price">${formatPrice(product.price)} ${CURRENCY}</div>
+                            ${getTrendHtml(product.trend)}
+                        </div>
                         ${product.installment ? `<div class="product-installment">${formatPrice(product.installment)} so'm/oyiga</div>` : ''}
                         <h3 class="product-name">${product.name}</h3>
                     </div>
