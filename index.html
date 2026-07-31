@@ -196,21 +196,21 @@
             object-fit: cover; /* Fills the frame completely */
         }
         
-         /* ✨ POLISHED: Glassy/Gray effect for price and name section (COMPACT) */
+        /* ✨ GLASSY RED effect for price and name section */
         .product-info { 
-            padding: 8px 12px; /* Reduced top/bottom padding from 12px to 8px */
-            background: rgba(245, 245, 247, 0.85); 
+            padding: 8px 12px;
+            background: rgba(254, 0, 2, 0.08); /* Very light red tint with transparency */
             backdrop-filter: blur(8px);            
             -webkit-backdrop-filter: blur(8px);    
-            border-top: 1px solid rgba(255, 255, 255, 0.6); 
+            border-top: 1px solid rgba(254, 0, 2, 0.2); /* Subtle red border highlight */
         }
         
         .product-price { 
-            font-size: 1.05rem; /* Slightly tighter font size */
+            font-size: 1.05rem;
             font-weight: 700; 
-            color: var(--primary); 
-            margin-bottom: 2px; /* Reduced from 4px to 2px */
-            line-height: 1.2;   /* Tightens the text vertically */
+            color: var(--primary); /* Keeps the red price text */
+            margin-bottom: 2px;
+            line-height: 1.2;
         }
         
         .product-name { 
@@ -220,7 +220,7 @@
             overflow: hidden; 
             text-overflow: ellipsis; 
             font-weight: 600;
-            line-height: 1.2;   /* Tightens the text vertically */
+            line-height: 1.2;
         }
         .search-box { 
             display: flex; 
