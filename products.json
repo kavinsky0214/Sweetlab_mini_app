@@ -1,18 +1,92 @@
 [
   {
+    "id": 1,
+    "name": "Xiaomi Redmi Note 15",
+    "price": "2799000",
+    "old_price": "4198500",
+    "installment": "198262",
+    "category": "phones",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&h=500&fit=crop",
+    "description": "Latest Xiaomi smartphone with 128GB storage, 8GB RAM, 108MP camera, and 5000mAh battery. Perfect for everyday use."
+  },
+  {
     "id": 2,
-    "name": "HP Victus",
-    "price": "12000000",
-    "category": "Laptops",
-    "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/Hp-victus.jfif",
-    "description": "Ноутбук HP Victus Ryzen 7 8845HS DDR5 16/512 SSD RTX 4060 8GB 15.6FH.D IPS 144HZ"
+    "name": "iPhone 15 Pro Max",
+    "price": "18500000",
+    "old_price": "",
+    "installment": "1295000",
+    "category": "phones",
+    "image": "https://images.unsplash.com/photo-1696446702094-a0c707704fc8?w=500&h=500&fit=crop",
+    "description": "Apple's flagship phone with A17 Pro chip, titanium design, 256GB storage, and professional camera system."
   },
   {
     "id": 3,
-    "name": "Redmi Note 15 Pro",
-    "price": "3700000",
-    "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/redmi_note15.webp",
-    "category": "Phones",
-    "description": "Смартфон Xiaomi Redmi Note 15 Pro, 12+512 ГБ, 200 МП камера, 6.77″ FHD+ AMOLED, 6500 мАч."
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": "15999000",
+    "old_price": "17500000",
+    "installment": "1119930",
+    "category": "phones",
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&h=500&fit=crop",
+    "description": "Premium Samsung phone with S Pen, 512GB storage, 200MP camera, and AI-powered features."
+  },
+  {
+    "id": 4,
+    "name": "MacBook Pro 14 M3",
+    "price": "24500000",
+    "old_price": "",
+    "installment": "1715000",
+    "category": "laptops",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&h=500&fit=crop",
+    "description": "Professional laptop with M3 chip, 16GB RAM, 512GB SSD, and stunning Liquid Retina XDR display."
+  },
+  {
+    "id": 5,
+    "name": "HP Pavilion 15",
+    "price": "6899000",
+    "old_price": "7999000",
+    "installment": "482930",
+    "category": "laptops",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop",
+    "description": "Affordable laptop with Intel Core i5, 8GB RAM, 512GB SSD, perfect for students and home office."
+  },
+  {
+    "id": 6,
+    "name": "LG Smart Fridge 635L",
+    "price": "12999000",
+    "old_price": "14500000",
+    "installment": "909930",
+    "category": "fridges",
+    "image": "https://images.unsplash.com/photo-1571175443880-49e1d58b794a?w=500&h=500&fit=crop",
+    "description": "Large capacity smart refrigerator with inverter compressor, water dispenser, and smart diagnosis."
+  },
+  {
+    "id": 7,
+    "name": "Samsung Side-by-Side Fridge",
+    "price": "9899000",
+    "old_price": "",
+    "installment": "692930",
+    "category": "fridges",
+    "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=500&h=500&fit=crop",
+    "description": "Modern side-by-side refrigerator with 617L capacity, digital inverter, and LED lighting."
+  },
+  {
+    "id": 8,
+    "name": "General Electric AC 24000 BTU",
+    "price": "5499000",
+    "old_price": "6299000",
+    "installment": "384930",
+    "category": "acs",
+    "image": "https://images.unsplash.com/photo-1614638554315-6f13b5f5f3b8?w=500&h=500&fit=crop",
+    "description": "Powerful air conditioner with inverter technology, suitable for 30-35 sqm rooms, energy efficient."
+  },
+  {
+    "id": 9,
+    "name": "Daikin Split AC 18000 BTU",
+    "price": "4299000",
+    "old_price": "",
+    "installment": "300930",
+    "category": "acs",
+    "image": "https://images.unsplash.com/photo-1585338603535-6a5a7f7e68b1?w=500&h=500&fit=crop",
+    "description": "Reliable Daikin air conditioner with cooling and heating modes, quiet operation, and remote control."
   }
 ]
