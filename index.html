@@ -584,17 +584,17 @@
 <body>
     <div class="app-container">
         <div class="app-header">
-            <div class="app-title">YUKSALISH</div>
+            <div class="app-title">Brand nomi</div>
         </div>
 
         <section id="home" class="active">
             <div class="hero">
                 <h1>Premium Electronics.</h1>
                 <p>Upgrade your life with the latest smartphones, laptops, and home appliances.</p>
-                <a href="#catalog" class="btn" onclick="showSection('catalog')">Shop Now</a>
+                <a href="#catalog" class="btn" onclick="showSection('catalog')">Mahsulotlarni ko'rish</a>
             </div>
 
-            <h2 class="section-title">Featured Products</h2>
+            <h2 class="section-title">Yangi mahsulotlar</h2>
             <div class="products-grid" id="featuredProducts"></div>
         </section>
 
@@ -606,33 +606,33 @@
                 </button>
             </div>
             <div class="categories">
-                <button class="category-btn active" data-category="all" onclick="filterCategory(this, 'all')">All</button>
-                <button class="category-btn" data-category="phones" onclick="filterCategory(this, 'phones')">Phones</button>
-                <button class="category-btn" data-category="laptops" onclick="filterCategory(this, 'laptops')">Laptops</button>
-                <button class="category-btn" data-category="fridges" onclick="filterCategory(this, 'fridges')">Fridges</button>
-                <button class="category-btn" data-category="acs" onclick="filterCategory(this, 'acs')">Air Conditioners</button>
+                <button class="category-btn active" data-category="all" onclick="filterCategory(this, 'all')">Barchasi</button>
+                <button class="category-btn" data-category="phones" onclick="filterCategory(this, 'phones')">Smarfonlar</button>
+                <button class="category-btn" data-category="laptops" onclick="filterCategory(this, 'laptops')">Noubuklar</button>
+                <button class="category-btn" data-category="fridges" onclick="filterCategory(this, 'fridges')">Televizorlar</button>
+                <button class="category-btn" data-category="acs" onclick="filterCategory(this, 'acs')">Maishiy texnika</button>
             </div>
             <div class="products-grid" id="searchResults"></div>
         </section>
 
         <section id="catalog">
-            <h2 class="section-title">Our Products</h2>
+            <h2 class="section-title">Tovarlar</h2>
             <div class="categories">
-                <button class="category-btn active" data-category="all" onclick="filterCatalog(this, 'all')">All</button>
-                <button class="category-btn" data-category="phones" onclick="filterCatalog(this, 'phones')">Phones</button>
-                <button class="category-btn" data-category="laptops" onclick="filterCatalog(this, 'laptops')">Laptops</button>
-                <button class="category-btn" data-category="fridges" onclick="filterCatalog(this, 'fridges')">Fridges</button>
-                <button class="category-btn" data-category="acs" onclick="filterCatalog(this, 'acs')">Air Conditioners</button>
+                <button class="category-btn active" data-category="all" onclick="filterCatalog(this, 'all')">Barchasi</button>
+                <button class="category-btn" data-category="phones" onclick="filterCatalog(this, 'phones')">Smarfonlar</button>
+                <button class="category-btn" data-category="laptops" onclick="filterCatalog(this, 'laptops')">Noubuklar</button>
+                <button class="category-btn" data-category="fridges" onclick="filterCatalog(this, 'fridges')">Televizorlar</button>
+                <button class="category-btn" data-category="acs" onclick="filterCatalog(this, 'acs')">Maishiy texnika</button>
             </div>
             <div class="products-grid" id="catalogProducts"></div>
         </section>
 
         <section id="cart">
-            <h2 class="section-title">Your Cart</h2>
+            <h2 class="section-title">Savatingiz</h2>
             <div class="cart-items" id="cartItems">
                 <div class="empty-cart">
                     <i class="fas fa-shopping-cart"></i>
-                    <p>Your cart is empty</p>
+                    <p>Savatingiz bo'sh</p>
                 </div>
             </div>
             <div class="cart-total" style="display: none;">
@@ -645,22 +645,22 @@
     <div class="bottom-nav">
         <div class="nav-item active" onclick="showSection('home')">
             <i class="fas fa-home nav-icon"></i>
-            <span>Home</span>
+            <span>Bosh oyna</span>
         </div>
         <div class="nav-item" onclick="showSection('search')">
             <i class="fas fa-search nav-icon"></i>
-            <span>Search</span>
+            <span>Qidirish</span>
         </div>
         <div class="nav-item" onclick="showSection('catalog')">
             <i class="fas fa-th-large nav-icon"></i>
-            <span>Catalog</span>
+            <span>Katalog</span>
         </div>
         <div class="nav-item" onclick="showSection('cart')">
             <div style="position: relative;">
                 <i class="fas fa-shopping-cart nav-icon"></i>
                 <div class="cart-badge" id="cartBadge" style="display: none;">0</div>
             </div>
-            <span>Cart</span>
+            <span>Savat</span>
         </div>
     </div>
 
