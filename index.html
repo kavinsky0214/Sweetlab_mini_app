@@ -199,20 +199,40 @@
             object-fit: cover;
         }
         
-        /* ✨ More spacious, softer gray with better shadow */
-        .product-info { 
-            padding: 14px 15px; /* Increased padding from 8px to 14px */
-            background: #f5f5f5; /* Softer, lighter gray */
+               .product-info { 
+            padding: 12px 14px;
+            background: #f5f5f5;
             border-top: 1px solid #e8e8e8;
-            box-shadow: 0 -2px 8px rgba(0,0,0,0.04); /* Subtle upward shadow */
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
         }
         
         .product-price { 
-            font-size: 1.05rem;
-            font-weight: 700; 
+            font-size: 1.15rem;
+            font-weight: 800; /* Extra bold for main price */
             color: #1a1a1a;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             line-height: 1.2;
+            letter-spacing: -0.5px; /* Tighter spacing for numbers */
+        }
+        
+        .product-old-price {
+            font-size: 0.85rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .product-installment {
+            display: inline-block;
+            background: #fe0002; /* Your brand red instead of yellow */
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            line-height: 1.3;
         }
         
         .product-name { 
@@ -222,8 +242,8 @@
             overflow: hidden; 
             text-overflow: ellipsis; 
             font-weight: 600;
-            line-height: 1.2;
-        }
+            line-height: 1.3;
+            margin-top: 4px;
         }
         .search-box { 
             display: flex; 
