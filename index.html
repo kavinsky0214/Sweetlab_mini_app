@@ -170,22 +170,29 @@
             grid-template-columns: repeat(2, 1fr); 
             gap: 16px; 
         }
+                /* ✨ Dynamic Flexbox Card Layout */
         .product-card { 
             background: var(--light); 
             border-radius: var(--radius); 
             overflow: hidden; 
             box-shadow: 0 4px 16px rgba(0,0,0,0.12);
             cursor: pointer; 
-            transition: var(--transition); 
+            transition: var(--transition);
+            
+            /* NEW: Flexbox magic for dynamic heights */
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Forces the card to fill the grid cell height */
         }
         .product-card:active { 
             transform: scale(0.98); 
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         
-        /* ✨ Reduced image height */
+        /*  Image expands to fill all available space */
         .product-img { 
-            height: 140px; /* Reduced from 150px to 140px */
+            flex: 1; /* Takes up ALL remaining space left by the price tag */
+            min-height: 140px; /* Ensures image never gets too small */
             width: 100%; 
             background-color: #ffffff; 
             display: flex; 
@@ -199,17 +206,18 @@
             object-fit: cover;
         }
         
-        /*  Compact price tag section */
+        /* ✨ Price tag stays glued to the bottom */
         .product-info { 
-            padding: 10px 12px; /* Reduced from 14px/15px to 10px/12px */
-            background: #f5f5f5;
+            flex-shrink: 0; /* Prevents the info section from shrinking */
+            padding: 10px 12px; 
+            background: #f5f5f5; 
             border-top: 1px solid #e8e8e8;
             box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
         }
         
         .product-price { 
-            font-size: 1rem; /* Reduced from 1.2rem to 1rem */
-            font-weight: 700; /* Reduced from 800 to 700 */
+            font-size: 1rem; 
+            font-weight: 700; 
             color: #1a1a1a;
             line-height: 1.2;
             margin-bottom: 2px;
@@ -217,30 +225,30 @@
         }
         
         .product-old-price {
-            font-size: 0.75rem; /* Reduced from 0.85rem to 0.75rem */
+            font-size: 0.75rem; 
             color: #999;
             text-decoration: line-through;
-            margin-bottom: 4px; /* Reduced from 6px to 4px */
+            margin-bottom: 4px; 
             font-weight: 500;
         }
         
         .product-installment {
             display: inline-block;
-            background: #fe0002;
+            background: #fe0002; 
             color: white;
-            font-size: 0.7rem; /* Reduced from 0.75rem to 0.7rem */
+            font-size: 0.7rem; 
             font-weight: 600;
-            padding: 3px 6px; /* Reduced from 4px/8px to 3px/6px */
-            border-radius: 4px; /* Reduced from 6px to 4px */
-            margin-bottom: 6px; /* Reduced from 8px to 6px */
+            padding: 3px 6px; 
+            border-radius: 4px; 
+            margin-bottom: 6px; 
             line-height: 1.2;
         }
         
         .product-name { 
-            font-size: 0.8rem; /* Reduced from 0.85rem to 0.8rem */
+            font-size: 0.8rem; 
             color: #1a1a1a;
             font-weight: 600;
-            line-height: 1.2; /* Reduced from 1.3 to 1.2 */
+            line-height: 1.2; 
             white-space: nowrap; 
             overflow: hidden; 
             text-overflow: ellipsis; 
