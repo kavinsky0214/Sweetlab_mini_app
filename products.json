@@ -5,6 +5,7 @@
     "price": "2799000",
     "old_price": "4198500",
     "installment": "198262",
+    "trend": -5,
     "category": "phones",
     "image": "https://raw.githubusercontent.com/kavinsky0214/Images/refs/heads/main/redmi_note15.webp",
     "description": "Latest Xiaomi smartphone with 128GB storage, 8GB RAM, 108MP camera, and 5000mAh battery. Perfect for everyday use."
@@ -15,6 +16,7 @@
     "price": "18500000",
     "old_price": "",
     "installment": "1295000",
+    "trend": -5,
     "category": "phones",
     "image": "https://expercom.com/cdn/shop/files/iPhone_15_Pro_Max_Blue_Titanium_PDP_Image_Position-1__en-US_8f1c8d3d-9afd-465a-a622-a855989878e5.jpg?v=1738267276",
     "description": "Apple's flagship phone with A17 Pro chip, titanium design, 256GB storage, and professional camera system."
@@ -25,6 +27,7 @@
     "price": "15999000",
     "old_price": "17500000",
     "installment": "1119930",
+    "trend": -5,
     "category": "phones",
     "image": "https://dommobile.ru/wp-content/uploads/2024/01/samsung-galaxy-s24-ultra-seryj-2-scaled-768x768.webp",
     "description": "Premium Samsung phone with S Pen, 512GB storage, 200MP camera, and AI-powered features."
@@ -35,6 +38,7 @@
     "price": "24500000",
     "old_price": "",
     "installment": "1715000",
+    "trend": -5,
     "category": "laptops",
     "image": "https://avatars.mds.yandex.net/get-mpic/16699368/img_id5383113200819335412.jpeg/orig",
     "description": "Professional laptop with M3 chip, 16GB RAM, 512GB SSD, and stunning Liquid Retina XDR display."
@@ -45,6 +49,7 @@
     "price": "6899000",
     "old_price": "7999000",
     "installment": "482930",
+    "trend": -5,
     "category": "laptops",
     "image": "https://basket-20.wbbasket.ru/vol3477/part347770/347770310/images/big/1.webp",
     "description": "Affordable laptop with Intel Core i5, 8GB RAM, 512GB SSD, perfect for students and home office."
@@ -55,6 +60,7 @@
     "price": "12999000",
     "old_price": "14500000",
     "installment": "909930",
+    "trend": -5,
     "category": "fridges",
     "image": "https://mega-kuhnya.ru/image/cache/catalog/product/LG/Mobile-Zoom-2_23-1200x800.jpg",
     "description": "Large capacity smart refrigerator with inverter compressor, water dispenser, and smart diagnosis."
@@ -65,6 +71,7 @@
     "price": "9899000",
     "old_price": "",
     "installment": "692930",
+    "trend": -5,
     "category": "fridges",
     "image": "https://bistrotehnika.ru/image/cache/catalog/tovari/holodilniki/oad-resize_cache-iblock-bb5-c9b-1900_563_1-1-1200x630.jpg",
     "description": "Modern side-by-side refrigerator with 617L capacity, digital inverter, and LED lighting."
@@ -75,6 +82,7 @@
     "price": "5499000",
     "old_price": "6299000",
     "installment": "384930",
+    "trend": -5,
     "category": "acs",
     "image": "https://sc04.alicdn.com/kf/H02a18002e3e54312bd573d6ad4eba93aL/9000BTU-Brand-New-Product-24-Hours-Timer-R410-T1-T3-Outdoor-Air-Conditioner.jpg",
     "description": "Powerful air conditioner with inverter technology, suitable for 30-35 sqm rooms, energy efficient."
@@ -85,6 +93,7 @@
     "price": "4299000",
     "old_price": "",
     "installment": "300930",
+    "trend": -5,
     "category": "acs",
     "image": "https://image.made-in-china.com/2f0j00fhgeEMZGAmbF/Heating-Cooling-AC-Fashionable-Wall-Mounted-Air-Conditioner-9000-BTU-Low-Power-Operation.jpg",
     "description": "Reliable Daikin air conditioner with cooling and heating modes, quiet operation, and remote control."
